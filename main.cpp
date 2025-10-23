@@ -29,14 +29,47 @@ using namespace std;
 
   //problem 5
 
+    int problem5(int n ,int d, int deg=0) {
+        if (d==0) return 1;
+        deg = n * problem5(n,d-1);
+        return deg;
+    }
+
+  //problem 6
+    float problem6(int n) {
+        if (n==1) return 1;
+        return (1./(n*n))+problem6(n-1);
+
+    }
+
+//problem 7
+
+float problem7(int n) {
+        if (n==1)return 1./3;
+        return (1./(n*(n+2)))+problem7(n-1);
+    }
+
+//problem 8
+
+int problem8(int n) {
+        if (n==0) return 0;
+        return (n%10)+problem8(n/10);
+    }
 
 
+//problem 9
+
+int problem9(int a, int b) {
+        if (a==0) return 0;
+
+            return (a<0)? -(b+problem9(-a-1,b)): b+problem9(a-1,b);
+
+    }
 
 
 
 
 int main() {
-        cout<<problem4(5);
-      []ertgwertgr
+        cout<<problem9(-1,45)<<endl;
 
     }
