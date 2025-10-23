@@ -15,9 +15,9 @@ using namespace std;
         problem2(n-1);
     }
     //problem 3
-   int problem3(int n,int sum = 0) {
-      if (n==0) cout<<sum;
-      return sum + problem3(n-1,sum);
+   int problem3(int n) {
+      if (n==0) return 0;
+      return n+ problem3(n-1);
     }
 
 
@@ -66,10 +66,29 @@ int problem9(int a, int b) {
 
     }
 
+// extra problem
+bool isPowerOfThree(int n) {
+        if(n==1) return 1;
+        if (n%3==0) return isPowerOfThree(n/3);
+        else return 0;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 int main() {
-        cout<<problem9(-1,45)<<endl;
+        cout<<isPowerOfThree(81)<<endl;
 
     }
