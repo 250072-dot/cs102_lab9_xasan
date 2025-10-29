@@ -77,7 +77,12 @@ bool isPowerOfThree(int n) {
 
 
 
-
+//
+int even(int n) {
+        if (n==0) return 0;
+        if (n%2==0) {return 1+even(n/10);}
+        else {return even(n/10);}
+    }
 
 
 
@@ -90,6 +95,6 @@ bool isPowerOfThree(int n) {
 
 
 int main() {
-        cout<<isPowerOfThree(81)<<endl;
+        cout<<even(222)<<endl;
 
     }
